@@ -17,11 +17,12 @@ app.use(express.urlencoded({extended: true}))
 // app.use(express.static('./views'));
 
 app.get('/', (req, res) => {
-    res.render('index', {toDoListTitle: '오늘의 할 일 : ' + toDoLists.length, toDoLists: toDoLists})
+    res.render('index', {toDoLists: toDoLists})
 })
 
-//  요청을 처리하는 라우트 핸들러 정의
+// ADD 요청을 처리하는 라우트 핸들러 정의
 app.post('/add_list', (req, res) => {
+    // 요청 본문에서 'content' 필드의 값을 가져옴
     const newContent = req.body.content
 
     /* alert설정은 다음시간에...
@@ -30,9 +31,13 @@ app.post('/add_list', (req, res) => {
 
     } else { */
 
-    
+    // 콘솔에 새로운 항목을 추가한다고 로그 출력
     console.log(newContent + '추가')
+
+    // 'toDoLists' 배열에 새로운 항목을 추가
     toDoLists.push(newContent)
+
+    // 홈페이지로 리디렉션
     res.redirect('/')
 
 })
@@ -47,6 +52,7 @@ app.get('/clear_list', (req, res) => {
     // 루트 페이지로 리디렉션하여 사용자에게 변경된 목록을 보여줌
     res.redirect('/')
 })
+
 
 // DELETE 요청을 처리하는 라우트 핸들러 정의
 app.get('/delete_list/:id', (req, res) => {
@@ -64,6 +70,7 @@ app.get('/delete_list/:id', (req, res) => {
     res.redirect('/')
 })
 
+
 // CHECK용 index 요청을 처리하는 라우트 핸들러 정의
 app.get('/checked/:id', (req, res) => {
     // URL 파라미터에서 'id' 값을 추출
@@ -74,6 +81,7 @@ app.get('/checked/:id', (req, res) => {
 })
 
 
+// 해당하는 id의 update 페이지로 이동
 app.get('/open_update/:id', (req, res) => {
     res.render('update', {prevContent: req.params.id})
 })
@@ -108,8 +116,10 @@ app.post('/update_list', (req, res)=> {
 
 // 1. img get function 정의
 app.get('/img', function(req,res){
+
     // img file Read . . . Start
     fs.readFile('./img/blueadd.png', (err,data) => {
+
         // data 형태 buffer 형태로 return
         // log 확인시 아래 log 주석 제거
         // console.log(data);
