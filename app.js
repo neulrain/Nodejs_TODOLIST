@@ -20,23 +20,31 @@ app.get('/', (req, res) => {
     res.render('index', {toDoListTitle: '오늘의 할 일 : ' + toDoLists.length, toDoLists: toDoLists})
 })
 
-
+//  요청을 처리하는 라우트 핸들러 정의
 app.post('/add_list', (req, res) => {
     const newContent = req.body.content
 
-    /* if (newContent === '') {
+    /* alert설정은 다음시간에...
+        if (newContent === '') {
         res.json({ success: false, message: '할 일을 입력해주세요' });
 
     } else { */
+
+    
     console.log(newContent + '추가')
     toDoLists.push(newContent)
     res.redirect('/')
 
 })
 
+// 전체삭제 요청을 처리하는 라우트 핸들러 정의
 app.get('/clear_list', (req, res) => {
     console.log('클리어') 
+
+    // 빈 배열을 전달해 초기값으로 리셋
     toDoLists = [];
+    
+    // 루트 페이지로 리디렉션하여 사용자에게 변경된 목록을 보여줌
     res.redirect('/')
 })
 
@@ -56,8 +64,12 @@ app.get('/delete_list/:id', (req, res) => {
     res.redirect('/')
 })
 
+// CHECK용 index 요청을 처리하는 라우트 핸들러 정의
 app.get('/checked/:id', (req, res) => {
+    // URL 파라미터에서 'id' 값을 추출
     const checkedContent = req.params.id
+
+    // checkedContent에서 인덱스를 추출해서 index로 지정해줌
     let index = toDoLists.indexOf(checkedContent)
 })
 
@@ -118,16 +130,10 @@ app.get('/img', function(req,res){
 app.use(express.static('public'));
 
 
-app.listen(port, () => {
-    console.log('connected!')
-})
-
-
-/*  const item = document.createElement('span')
-    checkbox.addEventListener('change', (event) => {
-    item.style.textDecoration = event.target.checked ? 'line-through' : '' 
-}*/
-
 app.get('/gohome/', (req, res) => {
     res.redirect('/')
+})
+
+app.listen(port, () => {
+    console.log('connected!')
 })
