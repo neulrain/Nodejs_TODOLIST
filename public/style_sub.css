@@ -88,12 +88,12 @@ h1{
     cursor: pointer;
     color: #fff;
     margin-top: 8px;
+    font-size: 16px;
+    font-family: "Noto sans KR";
 }
+
 .done_button_blue:hover{
     background-color: #1B66C8;
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.18);
 }
-    
-    font-size: 16px;
-    font-family: "Noto sans KR";
-}
+   
