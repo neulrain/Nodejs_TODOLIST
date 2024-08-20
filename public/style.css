@@ -1,0 +1,221 @@
+body{
+    background: #0575f3;
+    
+}
+
+h1{
+    width: 164px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: "Inter";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 62.5% */
+    margin: 43.8px 0 0 0;
+}
+.contents-wrap{
+        width: 383px;
+        height: 600px;
+        flex-shrink: 0;
+        margin: 100px auto 0 auto;
+        border-radius: 24px;
+        background: #F6F9Fb;
+        padding: 20px;
+        position: relative;
+        box-sizing: border-box;
+}
+.add_button{
+    width: 48px;
+    height: 48px;
+    background: #0575F3;
+    position: relative;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.add_button img{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+.add_button_blue{
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #0575f3;
+    background-image: url("/img/add_24.svg");
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+    cursor: pointer;
+
+}
+.add_button_blue:hover{
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #1B66C8;
+    background-image: url("/img/add_24.svg");
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+}
+
+ul{
+    padding: 0;
+    margin: 20px 0 0 0;
+    overflow: auto;
+    height: 344px;
+    font-family: "Noto Sans KR";
+}
+li{
+    list-style-type: none;
+    padding: 16px;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 12px;
+    border: 1px solid #E4E7EC;
+    display: flex;
+    gap: 8px;
+}
+.li_wrap{
+    position: relative;
+    display: flex;
+    height: 20px;
+    width: 100%;
+    gap: 8px;
+}
+
+ul li input[type=checkbox]{
+   display: none;
+}
+
+/*체크 전*/
+input[type=checkbox] + label {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #D0D5DD;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    border-radius: 4px;
+    user-select: none;
+    margin-top: 2px;
+    box-sizing: border-box;
+}
+/* 체크되었을 때 */
+
+input[type=checkbox]:checked + label {  
+    background: #0575F3;
+    background-image: url('/img/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+}
+
+
+input[type=checkbox]:checked + label + span{
+    color: #98A2B3;
+    text-decoration-line: line-through;
+}
+
+.list_text{
+    flex-grow: 1;
+    color: var(--Gray-700, #344054);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.update_button{
+    width: 20px;
+    height: 20px;
+    background: #F9FaFb;
+    position: relative;
+    background-image: url('/img/edit_14.svg');
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+    cursor: pointer;
+}
+.update_button:hover{
+    background-color: #f2f4f7;
+}
+.update_button img{
+    position: absolute;
+    height: 14px;
+    top: 3px;
+    left: 3px;
+}
+
+.del_button{
+    width: 20px;
+    height: 20px;
+    background: #F9FaFb;
+    position: relative;
+    background-image: url("/img/x-close_14.svg");
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+    cursor: pointer;
+}
+.del_button:hover{
+    background-color: #f2f4f7;
+}
+.del_button img{
+    position: absolute;
+    height: 14px;
+    top: 3px;
+    left: 3px;
+}
+p.input_wrap{
+    display: flex;
+    gap: 8px;
+    margin: 31.9px 0 0 0;
+    font-family: "Noto Sans KR";
+   
+    
+}
+.input_box{
+    flex-grow: 1;
+    padding: 11px 14px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    overflow: hidden;
+    color: var(--Gray-500, #667085);
+    text-overflow: ellipsis;
+
+    /* Text md/Regular */
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+.clear_contents{
+    position: absolute;
+    left: 151px;
+    bottom: 30px;
+    display: flex;
+    gap: 4px;
+    cursor: pointer;
+}
+.clear_contents > p{
+    color: #667085;
+    font-family: "Noto sans KR";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+}
+.clear_contents:hover{
+    color: #364152;
+    background-color: #EDEDED;
+}

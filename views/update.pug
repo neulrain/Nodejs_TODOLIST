@@ -1,0 +1,20 @@
+html
+    head
+        meta(charset='utf-8')
+        title='Update Page'
+        link(rel='stylesheet', type='text/css', href="/style_sub.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet")
+    body
+        .contents-wrap
+            .home_button(onclick=`location.href='/gohome/'`)
+                    img(alt='goback' src="/img/x-close_14.png")
+            h1 수정하기
+            p 기존내용: 
+                span= prevContent
+            form(action='/update_list', method='post')
+                input.input_box(type='text' name='newContent' placeholder="변경될 내용을 입력해주세요")
+                input(type='hidden' name='prevContent' value=prevContent)
+                input.done_button_blue(type='submit' value='완료')

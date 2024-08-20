@@ -1,0 +1,34 @@
+html
+    head
+        meta(charset='utf-8')
+        title='To Do List'
+        link(rel='stylesheet', type='text/css', href="style.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet")
+    body   
+        .contents-wrap
+            h1 TODOLIST
+            form(action='/add_list' method='post')
+                p.input_wrap
+                    input.input_box(type='text' name='content' placeholder="할일을 입력해주세요")
+                    input.add_button_blue(type='submit' value="")
+                p
+                    ul
+                        each val, index in toDoLists
+                            li
+                                .li_wrap
+                                    input(type="checkbox" id=`chk-${index}`)
+                                    label(for=`chk-${index}`)
+                                    span.list_text= val   
+                                    button.update_button(type='button' onclick=`location.href='/open_update/${val}'`)
+                                    button.del_button(type='button' onclick='location.href="/delete_list/' + val + '"')
+                                    
+                .clear_contents(onclick=`location.href='/clear_list/'`)
+                    img(alt='refresh' src="/img/placeholder_20.svg")
+                    p 전체삭제
+
+
+                                
+                                

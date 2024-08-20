@@ -1,0 +1,93 @@
+body{
+    background: #0575f3;
+    
+}
+.home_button img{
+    position: absolute;
+    top: 20px;
+    right: 20px
+}
+
+h1{
+    width: 164px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: "Inter";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 62.5% */
+    margin: 43.8px 0 0 0;
+    font-family: "Noto Sans KR";
+}
+.contents-wrap{
+        width: 383px;
+        height: 600px;
+        flex-shrink: 0;
+        margin: 100px auto 0 auto;
+        border-radius: 24px;
+        background: #FFF;
+        padding: 20px;
+        position: relative;
+        box-sizing: border-box;
+}
+.contents-wrap p{
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    margin: 31.9px 0 8px 2px;
+    color: #0575f3;
+}
+.add_button{
+    width: 48px;
+    height: 48px;
+    background: #0575F3;
+    position: relative;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+.add_button img{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+.list_text{
+    flex-grow: 1;
+    color: var(--Gray-700, #344054);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.input_box{
+    flex-grow: 1;
+    padding: 11px 14px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    overflow: hidden;
+    color: var(--Gray-500, #667085);
+    text-overflow: ellipsis;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    width: 100%;
+}
+.done_button_blue{
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #0575f3;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 8px;
+    font-size: 16px;
+    font-family: "Noto sans KR";
+}
