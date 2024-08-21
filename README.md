@@ -1,20 +1,19 @@
 # Nodejs_TODOLIST
 
-html/css를 넘어 본격적으로 기획/디자인부터 실제 동작까지 해본 첫번째 javascript 프로젝트! <br>
-기획했던 내용 대부분을 구현해 뿌듯하다.
+node.js/Express를 활용한 TODOLIST프로그램 만들기
 
 <br>
 
+# 개요
+- 프로젝트 이름: Todolist
+- 개발 기간: 2024/08/19 ~ 2024/08/20
+- 기술스택: PUG / CSS / javascript / Node.js / Express
+- 멤버: FE2 8팀(최수진, 박규용, 이영주, 진채정)
+  
 
-### 기술스택
-- pug
-- CSS
-- javascript
-- Node.js
-- Express
-
-<hr>
 <br>
+
+# 화면 구성 및 주요 기능
 
 ### 메인페이지
 
